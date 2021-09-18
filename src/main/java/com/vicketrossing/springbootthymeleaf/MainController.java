@@ -15,4 +15,9 @@ public class MainController {
     public String showUsers(){
         return "users";
     }
+
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
 }
