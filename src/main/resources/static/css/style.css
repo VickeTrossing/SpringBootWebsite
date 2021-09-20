@@ -1,5 +1,5 @@
 body{
-    background: url(https://images.unsplash.com/photo-1630700246857-3113649eb3b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80) no-repeat;
+    background: url(https://images.unsplash.com/photo-1596774468032-915cdd39ea39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&q=80) no-repeat;
 }
 
 /* #292D3EFF */
@@ -69,7 +69,6 @@ body{
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: solid black 1px;
     margin-top: 150px;
     height: 70%;
     width: 70%;
@@ -78,6 +77,7 @@ body{
 
 
 .button-div-1 {
+    font-size: 20px;
     position: fixed;
     transform: translate(-50%, -50%);
     top: 30%;
@@ -92,6 +92,7 @@ body{
 }
 
 .button-div-2 {
+    font-size: 20px;
     position: fixed;
     transform: translate(-50%, -50%);
     top: 45%;
@@ -106,6 +107,7 @@ body{
 }
 
 .button-div-3 {
+    font-size: 20px;
     position: fixed;
     transform: translate(-50%, -50%);
     top: 60%;
@@ -117,6 +119,13 @@ body{
     background-color: rgb(81, 56, 237);
     color: white;
 
+}
+
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
 }
 
 
