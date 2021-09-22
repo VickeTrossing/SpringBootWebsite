@@ -1,9 +1,14 @@
 package user;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="user")
+@EnableJpaRepositories(basePackages = {"user"})
+@EntityScan()
 public class User {
 
     @Id
