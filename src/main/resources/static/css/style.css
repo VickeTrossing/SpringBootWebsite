@@ -75,17 +75,18 @@ body{
 
 
 .button-div-1 {
-    font-size: 20px;
+    font-size: 1.3rem;
     position: fixed;
     transform: translate(-50%, -50%);
     top: 30%;
     left: 50%;
     border-radius: 40px;
-    height: 60px;
-    width: 200px;
+    height: 3vw;
+    width: 8vw;
     text-align: center;
     background-color: rgb(81, 56, 237);
     color: white;
+    margin-bottom: 10px;
 
 }
 
@@ -96,8 +97,8 @@ body{
     top: 45%;
     left: 50%;
     border-radius: 40px;
-    height: 60px;
-    width: 200px;
+    height: 3vw;
+    width: 8vw;
     text-align: center;
     background-color: rgb(81, 56, 237);
     color: white;
@@ -111,8 +112,8 @@ body{
     top: 60%;
     left: 50%;
     border-radius: 40px;
-    height: 60px;
-    width: 200px;
+    height: 3vw;
+    width: 8vw;
     text-align: center;
     background-color: rgb(81, 56, 237);
     color: white;
