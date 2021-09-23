@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:color="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Users lmao</title>
+    <title>Hello</title>
+
+    <link th:href="@{../static/css/user-style.css}" rel="stylesheet">
+    <link th:href="@{/css/user-style.css}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
 </head>
 <body>
 
-  <h1>Hejsan</h1>
+    <div class="outer-div">
+
+        <div class="outer-border">
+
+            <div class="header-div">
+                <h1 class="header-class">Manage users</h1>
+            </div>
+
+            <div  style="color: black">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>E-mail</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <div class="menu-div">
+                <form action="/">
+                    <input type="submit" value="Go back" class="button-div-go-back"/>
+                </form>
+            </div>
+
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
