@@ -19,20 +19,16 @@ public class UserService {
     }
 
     public List<User> listAll(){
-        return (List<User>) userRepository.findAll();
+        return  userRepository.findAll();
     }
 
 
+
     public void addNewUser(User user){
-
         Optional<User> userOptional = userRepository.findByEmail(user.getEmail());
-
         if(userOptional.isPresent()){
             throw new IllegalStateException("User with email " + user.getEmail() + " already exist.");
         }
-
         userRepository.save(user);
-
-
     }
 }

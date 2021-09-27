@@ -13,16 +13,17 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 45)
+    @Column(name = "email", nullable = false, unique = true, length = 45)
     private String email;
 
-    @Column(nullable = false, unique = true, length = 15)
+    @Column(nullable = false, unique = true, length = 15, name="password")
     private String password;
 
     @Column(nullable = false, unique = true, length = 45, name ="first_name")
-    private String fistName;
+    private String firstName;
 
     @Column(nullable = false, unique = true, length = 45, name ="last_name")
     private String lastName;
@@ -31,17 +32,24 @@ public class User {
     private int age;
 
 
-    public User(Long id, String email, String password, String fistName, String lastName, int age) {
+    public User(Long id, String email, String password, String firstName, String lastName, int age) {
         this.setId(id);
         this.setEmail(email);
         this.setPassword(password);
-        this.setFistName(fistName);
+        this.setFirstName(firstName);
         this.setLastName(lastName);
         this.setAge(age);
     }
 
     public User(){}
 
+    public User(String email, String password, String firstName, String lastName, int age) {
+        this.email = email;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
 
     public Long getId() {
         return id;
@@ -67,12 +75,12 @@ public class User {
         this.password = password;
     }
 
-    public String getFistName() {
-        return fistName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFistName(String fistName) {
-        this.fistName = fistName;
+    public void setFirstName(String fistName) {
+        this.firstName = fistName;
     }
 
     public String getLastName() {
@@ -98,7 +106,7 @@ public class User {
                 "id=" + getId() +
                 ", email='" + getEmail() + '\'' +
                 ", password='" + getPassword() + '\'' +
-                ", fistName='" + getFistName() + '\'' +
+                ", fistName='" + getFirstName() + '\'' +
                 ", lastName='" + getLastName() + '\'' +
                 ", age=" + getAge() +
                 '}';
