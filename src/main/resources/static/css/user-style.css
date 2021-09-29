@@ -1,6 +1,10 @@
 body{
     font-family: Arial, serif;
-    background: url(https://images.unsplash.com/photo-1596774468032-915cdd39ea39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&q=80) no-repeat;
+    background: url(https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /* #292D3EFF */
@@ -113,12 +117,13 @@ button:focus { outline: none; }
     position: fixed;
     transform: translate(-50%, -50%);
     top: 100%;
-
+    border: none;
+    outline: none;
     border-radius: 40px;
     height: 60px;
     width: 200px;
     text-align: center;
-    background-color: rgb(81, 56, 237);
+    background-color: #ff1d63;
     color: white;
 
 }

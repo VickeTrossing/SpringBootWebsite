@@ -99,7 +99,7 @@ public class User {
                 ", password='" + getPassword() + '\'' +
                 ", fistName='" + getFirstName() + '\'' +
                 ", lastName='" + getLastName() + '\'' +
-                
+
                 '}';
     }
 }

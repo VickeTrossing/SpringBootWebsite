@@ -41,9 +41,12 @@
                             <td>
                                 <button class="button-div">Update</button>
 
-                                <a th:href="@{/users/deleteUser(userId=${userTemp.id})}"><button class="button-div-delete">
+                                <a th:href="@{/users/deleteUser(userId=${userTemp.id})}"
+                                   onclick="if(!(confirm('Are you sure you want to remove this item?'))) return false">
+                                    <button class="button-div-delete">
                                     Delete
-                                </button></a>
+                                    </button>
+                                </a>
 
 
                             </td>
