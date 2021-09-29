@@ -1,4 +1,4 @@
-package user;
+package com.vicketrossing.springbootthymeleaf.user;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping
+@RequestMapping("/users")
 public class UserController {
+
 
     @Autowired
     private final UserService userService;
@@ -20,21 +21,16 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/users")
+    @GetMapping
     public String showUserList(Model model) {
-        List<User> listUsers = userService.listAll();
+        List<User> listUsers = userService.getUsers();
+
         model.addAttribute("listUsers", listUsers);
 
         return "users";
     }
 
-    @GetMapping("/test")
-    public String showUserList1(Model model) {
-        List<User> listUsers = userService.listAll();
-        model.addAttribute("listUsers", listUsers);
 
-        return "test";
-    }
 
 
 

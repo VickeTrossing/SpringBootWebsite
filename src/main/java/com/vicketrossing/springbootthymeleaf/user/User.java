@@ -1,4 +1,4 @@
-package user;
+package com.vicketrossing.springbootthymeleaf.user;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;

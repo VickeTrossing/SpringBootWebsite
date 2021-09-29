@@ -1,4 +1,4 @@
-package user;
+package com.vicketrossing.springbootthymeleaf.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,9 +18,11 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public List<User> listAll(){
+    public List<User> getUsers(){
         return  userRepository.findAll();
     }
+
+
 
 
 
