@@ -38,6 +38,15 @@
                             <td th:text="${userTemp.email}"></td>
                             <td th:text="${userTemp.firstName}"></td>
                             <td th:text="${userTemp.lastName}"></td>
+                            <td>
+                                <button class="button-div">Update</button>
+
+                                <a th:href="@{/users/deleteUser(userId=${userTemp.id})}"><button class="button-div-delete">
+                                    Delete
+                                </button></a>
+
+
+                            </td>
                         </tr>
                     </tbody>
                 </table>

@@ -26,7 +26,7 @@ body{
     transform: translate(-50%, -50%);
 
     height: 75%;
-    width: 60%;
+    width: 70%;
     margin-top: 200px;
 
 }
@@ -36,6 +36,10 @@ body{
         -webkit-backdrop-filter: saturate(100%) blur(10px);
         backdrop-filter: saturate(100%) blur(10px);
     }
+}
+
+table th{
+    width: 20rem;
 }
 
 
@@ -73,50 +77,35 @@ body{
     align-content: center;
 }
 
+button:focus { outline: none; }
 
-.button-div-1 {
-    font-size: 20px;
-    position: fixed;
-    transform: translate(-50%, -50%);
+.button-div {
+    font-weight: bold;
+    border: none;
+    outline: none;
+    font-size: 15px;
     top: 30%;
     left: 50%;
     border-radius: 40px;
-    height: 60px;
-    width: 200px;
+    height: 40px;
+    width: 110px;
     text-align: center;
     background-color: rgb(81, 56, 237);
     color: white;
-
 }
 
-.button-div-2 {
-    font-size: 20px;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    top: 45%;
+.button-div-delete {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    top: 30%;
     left: 50%;
     border-radius: 40px;
-    height: 60px;
-    width: 200px;
+    height: 40px;
+    width: 110px;
     text-align: center;
-    background-color: rgb(81, 56, 237);
+    background-color: rgb(255, 0, 0);
     color: white;
-
-}
-
-.button-div-3 {
-    font-size: 20px;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    top: 60%;
-    left: 50%;
-    border-radius: 40px;
-    height: 60px;
-    width: 200px;
-    text-align: center;
-    background-color: rgb(81, 56, 237);
-    color: white;
-
 }
 
 .button-div-go-back{

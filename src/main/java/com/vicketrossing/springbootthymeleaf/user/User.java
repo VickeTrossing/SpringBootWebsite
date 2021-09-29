@@ -28,27 +28,24 @@ public class User {
     @Column(nullable = false, unique = true, length = 45, name ="last_name")
     private String lastName;
 
-    @Column(nullable = false, unique = true, length = 3)
-    private int age;
 
 
-    public User(Long id, String email, String password, String firstName, String lastName, int age) {
+
+    public User(Long id, String email, String password, String firstName, String lastName) {
         this.setId(id);
         this.setEmail(email);
         this.setPassword(password);
         this.setFirstName(firstName);
         this.setLastName(lastName);
-        this.setAge(age);
     }
 
     public User(){}
 
-    public User(String email, String password, String firstName, String lastName, int age) {
+    public User(String email, String password, String firstName, String lastName) {
         this.email = email;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
     }
 
     public Long getId() {
@@ -91,13 +88,7 @@ public class User {
         this.lastName = lastName;
     }
 
-    public int getAge() {
-        return age;
-    }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 
 
     @Override
@@ -108,7 +99,7 @@ public class User {
                 ", password='" + getPassword() + '\'' +
                 ", fistName='" + getFirstName() + '\'' +
                 ", lastName='" + getLastName() + '\'' +
-                ", age=" + getAge() +
+                
                 '}';
     }
 }
