@@ -14,7 +14,7 @@ public class MainController {
 
 
 
-    @GetMapping("")
+    @GetMapping("/home")
     public String showHomePage(){
         System.out.println("main controller");
         return "index";
@@ -22,7 +22,7 @@ public class MainController {
 
 
 
-    @GetMapping("/login")
+    @GetMapping("/login_page")
     public String login(){
         return "login";
     }
@@ -30,5 +30,10 @@ public class MainController {
     @GetMapping("/register")
     public String register(){
         return "register";
+    }
+
+    @GetMapping("/add_user")
+    public String addUser(){
+        return "add-user";
     }
 }

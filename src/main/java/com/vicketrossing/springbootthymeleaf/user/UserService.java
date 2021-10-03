@@ -1,6 +1,8 @@
 package com.vicketrossing.springbootthymeleaf.user;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +12,9 @@ import java.util.Optional;
 public class UserService {
 
     private final UserRepository userRepository;
-    //@Autowired private UserRepository repo;
+
+
+    PasswordEncoder passwordEncoder;
 
 
     @Autowired
@@ -31,6 +35,9 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
+    public void saveUser(User user){
+        this.userRepository.save(user);
+    }
 
 
     public void addNewUser(User user){
@@ -38,6 +45,11 @@ public class UserService {
         if(userOptional.isPresent()){
             throw new IllegalStateException("User with email " + user.getEmail() + " already exist.");
         }
+
+        User newUser = new User();
+        BeanUtils.copyProperties(user, newUser);
         userRepository.save(user);
     }
+
+    private void encodePassword(User user){}
 }

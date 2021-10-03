@@ -28,24 +28,37 @@ public class User {
     @Column(nullable = false, unique = true, length = 45, name ="last_name")
     private String lastName;
 
+    @Column(name="user_role")
+    private String roles;
 
 
 
-    public User(Long id, String email, String password, String firstName, String lastName) {
+
+    public User(Long id, String email, String password, String firstName, String lastName, String roles) {
         this.setId(id);
         this.setEmail(email);
         this.setPassword(password);
         this.setFirstName(firstName);
         this.setLastName(lastName);
+        this.setRoles(roles);
     }
 
     public User(){}
 
-    public User(String email, String password, String firstName, String lastName) {
+    public User(String email, String password, String firstName, String lastName, String roles) {
         this.email = email;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.roles = roles;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
     }
 
     public Long getId() {
@@ -89,17 +102,15 @@ public class User {
     }
 
 
-
-
     @Override
     public String toString() {
         return "User{" +
-                "id=" + getId() +
-                ", email='" + getEmail() + '\'' +
-                ", password='" + getPassword() + '\'' +
-                ", fistName='" + getFirstName() + '\'' +
-                ", lastName='" + getLastName() + '\'' +
-
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", roles='" + roles + '\'' +
                 '}';
     }
 }

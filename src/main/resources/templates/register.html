@@ -12,19 +12,19 @@
         <div>
 
             <div class="header-div">
-                <h1 class="header-class">Register page under construction</h1>
+                <h1 class="header-class">Registration</h1>
             </div>
 
 
             <div class="input-field">
-                <form action="#" th:action="@{/register}" th:object="${user}" method="post">
+                <form action="#" th:object="${user}" method="post">
                     <input type="text" placeholder="First name" th:field="*{firstName}">
                     <input type="text" placeholder="Last name" th:field="*{lastName}">
                     <input type="text" placeholder="email" th:field="*{email}">
                     <input type="password" placeholder="password" th:field="*{password}">
 
                     <div class="button-div">
-                        <button class="button-style">Register</button>
+                        <button class="button-style" type="submit">Register</button>
                     </div>
 
                     <div>

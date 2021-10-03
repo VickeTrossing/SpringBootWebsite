@@ -30,7 +30,7 @@ body{
     transform: translate(-50%, -50%);
 
     height: 75%;
-    width: 35%;
+    width: 30%;
     margin-top: 200px;
 
 }
@@ -164,4 +164,41 @@ a, a:hover, a:focus, a:active {
     color: inherit;
     border: none;
     box-shadow: none;
+}
+
+.input-field input{
+    font-size: 1.3rem;
+    width: 300px;
+    background-color: transparent;
+    border-bottom-color: #5d5d5d;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    color: #494949;
+    text-align: center;
+    margin-top: 70px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.button-style {
+    font-weight: bold;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    top: 30%;
+    left: 50%;
+    border-radius: 40px;
+    height: 55px;
+    width: 150px;
+    text-align: center;
+    background-color: #ff1d63;
+    color: white;
+}
+
+.button-div{
+    margin-top: 100px;
+    margin-bottom: 40px;
 }

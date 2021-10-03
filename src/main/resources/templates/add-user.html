@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+
+    <link th:href="@{../static/css/style.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+
+    <div class="outer-div">
+
+        <div class="outer-border">
+
+
+
+            <div class="header-div">
+                <h1 class="header-class">Add User</h1>
+            </div>
+
+
+            <div class="input-field">
+                <form action="#" method="post">
+                    <input type="text" placeholder="First name">
+                    <input type="text" placeholder="Last name" >
+                    <input type="text" placeholder="email">
+                    <input type="password" placeholder="password">
+
+                    <div class="button-div">
+                        <button class="button-style" type="submit">Add</button>
+
+                    </div>
+
+
+                </form>
+            </div>
+
+            <form action="/">
+                <input type="submit" value="Go back" class="button-style"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

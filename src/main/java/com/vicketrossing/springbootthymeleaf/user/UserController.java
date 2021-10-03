@@ -39,11 +39,9 @@ public class UserController {
 
     @PostMapping("/register")
     public String saveUser(Model model){
-
-        model.addAttribute("user", model);
+        User user = new User();
+        model.addAttribute("user", user);
 
         return "user-created";
     }
-
-
 }
