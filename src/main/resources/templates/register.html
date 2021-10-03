@@ -17,18 +17,18 @@
 
 
             <div class="input-field">
-                <form action="#" th:object="${user}" method="post">
-                    <input type="text" placeholder="First name" th:field="*{firstName}">
-                    <input type="text" placeholder="Last name" th:field="*{lastName}">
-                    <input type="text" placeholder="email" th:field="*{email}">
-                    <input type="password" placeholder="password" th:field="*{password}">
+                <form action="#" method="post" th:action="@{/process_register}" th:object="${user}">
+                    <input type="text" placeholder="First name" th:field="*{firstName}" required>
+                    <input type="text" placeholder="Last name" th:field="*{lastName}" required>
+                    <input type="email" placeholder="email" th:field="*{email}" required>
+                    <input type="password" placeholder="password" th:field="*{password}" required>
 
                     <div class="button-div">
                         <button class="button-style" type="submit">Register</button>
                     </div>
 
                     <div>
-                        <p>Already have an account? Log in <a th:href="login">here</a></p>
+                        <p>Already have an account? Log in <a th:href="login_page">here</a></p>
                     </div>
                 </form>
             </div>

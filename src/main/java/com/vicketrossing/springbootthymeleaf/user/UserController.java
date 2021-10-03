@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/users")
+@RequestMapping
 public class UserController {
 
 
@@ -35,13 +35,5 @@ public class UserController {
         userService.deleteUser(id);
 
         return "redirect:/users";
-    }
-
-    @PostMapping("/register")
-    public String saveUser(Model model){
-        User user = new User();
-        model.addAttribute("user", user);
-
-        return "user-created";
     }
 }

@@ -196,9 +196,28 @@ input:focus{
     text-align: center;
     background-color: #ff1d63;
     color: white;
+    margin-bottom: 10px;
+}
+
+.button-style-go-back {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 40px;
+    height: 55px;
+    width: 150px;
+    text-align: center;
+    background-color: transparent;
+    color: #ff1d63;
 }
 
 .button-div{
     margin-top: 100px;
     margin-bottom: 40px;
+}
+
+.button-go-back{
+    transform: translate(-40%, -10%);
+    top: 90%;
+    left: 40%;
 }

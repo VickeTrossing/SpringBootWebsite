@@ -2,6 +2,7 @@ package com.vicketrossing.springbootthymeleaf;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.vicketrossing.springbootthymeleaf.user.User;
 import com.vicketrossing.springbootthymeleaf.user.UserRepository;
@@ -28,7 +29,10 @@ public class MainController {
     }
 
     @GetMapping("/register")
-    public String register(){
+    public String register(Model model){
+
+        model.addAttribute("user", new User());
+
         return "register";
     }
 
