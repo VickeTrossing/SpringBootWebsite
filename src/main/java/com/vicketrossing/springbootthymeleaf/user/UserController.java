@@ -20,7 +20,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping
+    @GetMapping("/manage_user")
     public String showUserList(Model model) {
         List<User> listUsers = userService.getUsers();
 
@@ -34,6 +34,6 @@ public class UserController {
     public String deleteUser(@RequestParam("userId") Long id){
         userService.deleteUser(id);
 
-        return "redirect:/users";
+        return "redirect:/manage_user";
     }
 }

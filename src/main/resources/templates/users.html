@@ -28,6 +28,7 @@
                         <th>E-mail</th>
                         <th>First name</th>
                         <th>Last name</th>
+                        <th>Role</th>
                         <th>Action</th>
                     </tr>
                     </thead>
@@ -38,10 +39,11 @@
                             <td th:text="${userTemp.email}"></td>
                             <td th:text="${userTemp.firstName}"></td>
                             <td th:text="${userTemp.lastName}"></td>
+                            <td th:text="${userTemp.roles}"></td>
                             <td>
                                 <button class="button-div">Update</button>
 
-                                <a th:href="@{/users/deleteUser(userId=${userTemp.id})}"
+                                <a th:href="@{/deleteUser(userId=${userTemp.id})}"
                                    onclick="if(!(confirm('Are you sure you want to remove this item?'))) return false">
                                     <button class="button-div-delete">
                                     Delete

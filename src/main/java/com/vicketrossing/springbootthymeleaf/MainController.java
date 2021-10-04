@@ -7,12 +7,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.vicketrossing.springbootthymeleaf.user.User;
 import com.vicketrossing.springbootthymeleaf.user.UserRepository;
 import com.vicketrossing.springbootthymeleaf.user.UserService;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
 @Controller
 public class MainController {
 
+    @Autowired
+    private UserService userService;
 
 
     @GetMapping("/home")
@@ -35,6 +39,16 @@ public class MainController {
 
         return "register";
     }
+
+
+    @PostMapping("/process_register")
+    public String saveUSer(@ModelAttribute("user") User newUser){
+
+        userService.save(newUser);
+
+        return "user-created";
+    }
+
 
     @GetMapping("/add_user")
     public String addUser(){

@@ -19,17 +19,17 @@ public class User {
     @Column(name = "email", nullable = false, unique = true, length = 45)
     private String email;
 
-    @Column(nullable = false, unique = true, length = 15, name="password")
+    @Column(nullable = false, length = 15, name="password")
     private String password;
 
-    @Column(nullable = false, unique = true, length = 45, name ="first_name")
+    @Column(nullable = false, length = 45, name ="first_name")
     private String firstName;
 
-    @Column(nullable = false, unique = true, length = 45, name ="last_name")
+    @Column(nullable = false, length = 45, name ="last_name")
     private String lastName;
 
     @Column(name="user_role")
-    private String roles;
+    private String roles = "USER_ROLE";
 
 
 
@@ -50,7 +50,7 @@ public class User {
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.roles = roles;
+        this.roles = "ROLE_USER";
     }
 
     public String getRoles() {
