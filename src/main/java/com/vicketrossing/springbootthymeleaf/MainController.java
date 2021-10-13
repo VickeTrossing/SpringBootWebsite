@@ -50,8 +50,4 @@ public class MainController {
     }
 
 
-    @GetMapping("/add_user")
-    public String addUser(){
-        return "add-user";
-    }
 }

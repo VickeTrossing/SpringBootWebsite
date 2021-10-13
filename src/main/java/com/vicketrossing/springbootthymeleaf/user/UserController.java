@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping
+@RequestMapping("/user")
 public class UserController {
 
 
@@ -20,20 +20,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/manage_user")
-    public String showUserList(Model model) {
-        List<User> listUsers = userService.getUsers();
-
-        model.addAttribute("listUsers", listUsers);
-
-        return "users";
-    }
 
 
-    @GetMapping("/deleteUser")
-    public String deleteUser(@RequestParam("userId") Long id){
-        userService.deleteUser(id);
 
-        return "redirect:/manage_user";
-    }
 }
