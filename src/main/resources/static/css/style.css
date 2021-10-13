@@ -64,6 +64,7 @@ body{
 
 .header-div{
     margin: 10px;
+    color: #2f4858;
 }
 
 .menu-div{
@@ -156,7 +157,7 @@ a.fill-div {
 
 .header-class{
     text-align: center;
-    color: black;
+    color: #2f4858;
 }
 
 a, a:hover, a:focus, a:active {

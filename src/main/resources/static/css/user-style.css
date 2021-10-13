@@ -45,8 +45,9 @@ body{
 
 
 table {
-    border: 1px solid black;
     width: 100%;
+    color: #2f4858;
+    border-bottom: none !important;
 }
 
 th, td{
@@ -90,7 +91,7 @@ tbody {
     transform: translate(-50%, -50%);
 
     height: 95%;
-    width: 96%;
+    width: 97%;
     text-align: center;
 }
 
@@ -160,7 +161,7 @@ a.fill-div {
 
 .header-class{
     text-align: center;
-    color: black;
+    color: #2f4858;
 }
 
 a, a:hover, a:focus, a:active {

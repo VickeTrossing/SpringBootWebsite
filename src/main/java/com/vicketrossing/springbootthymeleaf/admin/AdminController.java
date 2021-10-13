@@ -25,13 +25,16 @@ public class AdminController {
         this.adminService = adminService;
     }
 
+    @GetMapping("/")
+    public String showHomePage(){
+        return "admin-index";
+    }
+
 
     @GetMapping("/manage_user")
     public String showUserList(Model model) {
         List<User> listUsers = userService.getUsers();
-
         model.addAttribute("listUsers", listUsers);
-
         return "users";
     }
 
