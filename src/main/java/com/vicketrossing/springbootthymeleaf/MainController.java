@@ -18,11 +18,11 @@ public class MainController {
 
     @GetMapping("/")
     public String showHomePage(){
-        return "redirect:login_page";
+        return "redirect:login";
     }
 
 
-    @GetMapping("/login_page")
+    @GetMapping("/login")
     public String login(){
         return "login";
     }
@@ -38,6 +38,11 @@ public class MainController {
     public String saveUSer(@ModelAttribute("user") User newUser){
         userService.save(newUser);
         return "user-created";
+    }
+
+    @GetMapping("/login_failed")
+    public String loginFailed(){
+        return "login_failed";
     }
 
 

@@ -3,6 +3,7 @@ package com.vicketrossing.springbootthymeleaf.admin;
 import com.vicketrossing.springbootthymeleaf.user.User;
 import com.vicketrossing.springbootthymeleaf.user.UserRepository;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,11 +12,12 @@ import java.util.Optional;
 @Service
 public class AdminService {
 
-    private final AdminRepository adminRepository;
+
+
+    @Autowired
     private final UserRepository userRepository;
 
-    public AdminService(AdminRepository adminRepository, UserRepository userRepository) {
-        this.adminRepository = adminRepository;
+    public AdminService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -47,8 +49,4 @@ public class AdminService {
         BeanUtils.copyProperties(user, newUser);
         userRepository.save(user);
     }
-
-    private void encodePassword(User user){}
-
-
 }

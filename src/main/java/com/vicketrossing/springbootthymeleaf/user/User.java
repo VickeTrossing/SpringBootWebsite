@@ -28,28 +28,32 @@ public class User {
     @Column(nullable = false, length = 45, name ="last_name")
     private String lastName;
 
+    @Column(name="active")
+    private boolean active;
+
     @Column(name="user_role")
     private String roles = "ROLE_USER";
 
 
 
-
-    public User(Long id, String email, String password, String firstName, String lastName, String roles) {
+    public User(Long id, String email, String password, String firstName, String lastName, boolean active, String roles) {
         this.setId(id);
         this.setEmail(email);
         this.setPassword(password);
         this.setFirstName(firstName);
         this.setLastName(lastName);
+        this.setActive(active);
         this.setRoles(roles);
     }
 
     public User(){}
 
-    public User(String email, String password, String firstName, String lastName, String roles) {
+    public User(String email, String password, String firstName, String lastName, boolean active) {
         this.email = email;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.active = active;
         this.roles = "ROLE_USER";
     }
 
@@ -101,6 +105,13 @@ public class User {
         this.lastName = lastName;
     }
 
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
 
     @Override
     public String toString() {
@@ -110,6 +121,7 @@ public class User {
                 ", password='" + password + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", active=" + active +
                 ", roles='" + roles + '\'' +
                 '}';
     }
