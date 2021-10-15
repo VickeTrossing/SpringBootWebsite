@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/admin")
@@ -41,10 +43,18 @@ public class AdminController {
 
     @GetMapping("/deleteUser")
     public String deleteUser(@RequestParam("userId") Long id){
-        userService.deleteUser(id);
+
+        User user = userService.findUser(id);
+
+        if(Objects.equals(user.getRoles(), "ROLE_ADMIN")){
+            System.out.println("You cant delete user with ADMIN rights");
+        }else{
+            userService.deleteUser(id);
+        }
 
         return "redirect:/admin/manage_user";
     }
+
 
     @GetMapping("/add_user")
     public String addUser(){

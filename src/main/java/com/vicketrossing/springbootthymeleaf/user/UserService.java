@@ -39,6 +39,9 @@ public class UserService {
         this.userRepository.save(user);
     }
 
+    public User findUser(Long id){
+       return userRepository.getById(id);
+    }
 
     public void addNewUser(User user){
         Optional<User> userOptional = userRepository.findByEmail(user.getEmail());
