@@ -29,7 +29,7 @@ public class User {
     private String lastName;
 
     @Column(name="user_role")
-    private String roles = "USER_ROLE";
+    private String roles = "ROLE_USER";
 
 
 

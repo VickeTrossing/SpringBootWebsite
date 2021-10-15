@@ -1,0 +1,224 @@
+body{
+    font-family: Arial, serif;
+    background: url(https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* #292D3EFF */
+
+.outer-div{
+
+    color: rgba(255, 255, 255, 0.48);
+    background-color: rgba(255, 255, 255, 0.27);
+    border: 1px solid rgba(241, 241, 235, 0.56);
+
+    border-radius: 10px;
+    padding: 32px;
+
+
+
+    backdrop-filter:  blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: fixed;
+    text-align: center;
+
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 75%;
+    width: 30%;
+    margin-top: 200px;
+
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .outer-div {
+        -webkit-backdrop-filter: saturate(100%) blur(10px);
+        backdrop-filter: saturate(100%) blur(10px);
+    }
+}
+
+
+.outer-border{
+    filter: none;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 -1px 70px 6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 0 -1px 70px 6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0 -1px 70px 6px rgba(0,0,0,0.55);
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 95%;
+    width: 95%;
+    text-align: center;
+}
+
+
+.header-div{
+    margin: 10px;
+    color: #2f4858;
+}
+
+.menu-div{
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 150px;
+    height: 70%;
+    width: 70%;
+    align-content: center;
+}
+
+
+
+.button-div-1 {
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 50%;
+    border-radius: 40px;
+    height: 3vw;
+    width: 8vw;
+    text-align: center;
+    background-color: #ff0c59;
+    color: white;
+    margin-bottom: 10px;
+
+}
+
+.button-div-2 {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    left: 50%;
+    border-radius: 40px;
+    height: 3vw;
+    width: 8vw;
+    text-align: center;
+    background-color: #ff0c59;
+    color: white;
+
+}
+
+.button-div-3 {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 50%;
+    border-radius: 40px;
+    height: 3vw;
+    width: 8vw;
+    text-align: center;
+    background-color: #ff0c59;
+    color: white;
+
+}
+
+.button-div-go-back{
+    font-size: 20px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 100%;
+    left: 50%;
+    border-radius: 40px;
+    height: 60px;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(81, 56, 237);
+    color: white;
+
+}
+
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+
+.header-class{
+    text-align: center;
+    color: #2f4858;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    box-shadow: none;
+}
+
+.input-field input{
+    font-size: 1.3rem;
+    width: 300px;
+    background-color: transparent;
+    border-bottom-color: #5d5d5d;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    color: #494949;
+    text-align: center;
+    margin-top: 70px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.button-style {
+    font-weight: bold;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    top: 30%;
+    left: 50%;
+    border-radius: 40px;
+    height: 55px;
+    width: 150px;
+    text-align: center;
+    background-color: #ff1d63;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.button-style-go-back {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 40px;
+    height: 55px;
+    width: 150px;
+    text-align: center;
+    background-color: transparent;
+    color: #ff1d63;
+}
+
+.button-div{
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.button-go-back{
+    transform: translate(-40%, -10%);
+    top: 90%;
+    left: 40%;
+}
