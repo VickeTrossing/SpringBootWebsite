@@ -2,15 +2,25 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:color="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
+    <title>Store</title>
 
     <link th:href="@{../static/css/store-style.css}" rel="stylesheet">
     <link th:href="@{/css/store-style.css}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
 </head>
-<body>
-    <h1>This is store yes</h1>
+<body style="background-color: #ff1d63; overflow-y: scroll">
+<div class="whole-page">
+
+</div>
+
+    <div class="outer-div">
+        <div class="outer-border">
+            <div class="header-div">
+                <h1>THIS IS STORE YES</h1>
+            </div>
+        </div>
+    </div>
 
     <a th:href="@{/logout}" class="btn btn-primary btn-sm mb-3">Logout</a>
 </body>

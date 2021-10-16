@@ -79,59 +79,6 @@ body{
 }
 
 
-
-.button-div-1 {
-    border: none;
-    outline: none;
-    font-size: 1.3rem;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    top: 30%;
-    left: 50%;
-    border-radius: 40px;
-    height: 3vw;
-    width: 8vw;
-    text-align: center;
-    background-color: #ff0c59;
-    color: white;
-    margin-bottom: 10px;
-
-}
-
-.button-div-2 {
-    border: none;
-    outline: none;
-    font-size: 20px;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    top: 45%;
-    left: 50%;
-    border-radius: 40px;
-    height: 3vw;
-    width: 8vw;
-    text-align: center;
-    background-color: #ff0c59;
-    color: white;
-
-}
-
-.button-div-3 {
-    border: none;
-    outline: none;
-    font-size: 20px;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    top: 60%;
-    left: 50%;
-    border-radius: 40px;
-    height: 3vw;
-    width: 8vw;
-    text-align: center;
-    background-color: #ff0c59;
-    color: white;
-
-}
-
 .button-div-go-back{
     font-size: 20px;
     position: fixed;
@@ -151,6 +98,7 @@ a.fill-div {
     display: block;
     height: 100%;
     width: 100%;
+    color: white;
     text-decoration: none;
 }
 
@@ -162,7 +110,7 @@ a.fill-div {
 
 a, a:hover, a:focus, a:active {
     text-decoration: none;
-    color: inherit;
+    color: white;
     border: none;
     box-shadow: none;
 }
@@ -185,19 +133,35 @@ input:focus{
 }
 
 .button-style {
-    font-weight: bold;
     border: none;
     outline: none;
     font-size: 20px;
     top: 30%;
     left: 50%;
     border-radius: 40px;
-    height: 55px;
-    width: 150px;
+    height: 4rem;
+    width: 9rem;
+    text-align: center;
+    background-color: #ff1d63;
+    color: white;
+    margin: 10px;
+}
+
+.button-style-logout {
+
+    border: none;
+    outline: none;
+    font-size: 20px;
+    top: 30%;
+    left: 50%;
+    border-radius: 40px;
+    height: 4rem;
+    width: 9rem;
     text-align: center;
     background-color: #ff1d63;
     color: white;
     margin-bottom: 10px;
+    margin-top: 100px;
 }
 
 .button-style-go-back {
@@ -213,7 +177,7 @@ input:focus{
 }
 
 .button-div{
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 40px;
 }
 

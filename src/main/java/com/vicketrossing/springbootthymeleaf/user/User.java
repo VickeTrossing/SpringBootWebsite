@@ -29,7 +29,7 @@ public class User {
     private String lastName;
 
     @Column(name="active")
-    private boolean active;
+    private boolean active = true;
 
     @Column(name="user_role")
     private String roles = "ROLE_USER";

@@ -8,6 +8,9 @@ import com.vicketrossing.springbootthymeleaf.user.User;
 import com.vicketrossing.springbootthymeleaf.user.UserService;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class MainController {
@@ -21,6 +24,15 @@ public class MainController {
         return "redirect:login";
     }
 
+    @RequestMapping("/default")
+    public String defaultAfterLogin(HttpServletRequest request){
+
+        if(request.isUserInRole("ROLE_ADMIN")){
+            return "redirect:/admin/";
+        }
+
+        return "store/frontpage";
+    }
 
     @GetMapping("/login")
     public String login(){
