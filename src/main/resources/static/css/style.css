@@ -141,6 +141,8 @@ input:focus{
     border-radius: 40px;
     height: 4rem;
     width: 9rem;
+    max-width: 200px;
+    max-height: 300px;
     text-align: center;
     background-color: #ff1d63;
     color: white;
@@ -161,7 +163,7 @@ input:focus{
     background-color: #ff1d63;
     color: white;
     margin-bottom: 10px;
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .button-style-go-back {

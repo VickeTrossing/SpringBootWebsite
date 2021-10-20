@@ -19,10 +19,10 @@
             </div>
 
             <div  style="color: black">
-                <table class="table table-bordered">
+                <table class="table table-bordered" id="table-id">
                     <thead class="thead-dark">
                     <tr>
-                        <th>ID</th>
+                        <th colspan="1">ID</th>
                         <th>E-mail</th>
                         <th>First name</th>
                         <th>Last name</th>
@@ -33,11 +33,11 @@
 
                     <tbody>
                         <tr th:each="userTemp : ${listUsers}">
-                            <td th:text="${userTemp.id}"></td>
-                            <td th:text="${userTemp.email}"></td>
-                            <td th:text="${userTemp.firstName}"></td>
-                            <td th:text="${userTemp.lastName}"></td>
-                            <td th:text="${userTemp.roles}"></td>
+                            <td th:text="${userTemp.id}" colspan="1"></td>
+                            <td th:text="${userTemp.email}" colspan="1"></td>
+                            <td th:text="${userTemp.firstName}" colspan="1"></td>
+                            <td th:text="${userTemp.lastName}" colspan="1"></td>
+                            <td th:text="${userTemp.roles}" colspan="1"></td>
                             <td>
                                 <button class="button-div">Update</button>
 
