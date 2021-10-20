@@ -16,15 +16,15 @@ body{
     border-radius: 10px;
 
     margin-top: 20px;
-    margin-bottom: 100px;
-    margin-left: 110px;
+    margin-bottom: 50px;
+    margin-left: 100px;
 
     backdrop-filter:  blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
     text-align: center;
     height: 100%;
-    width: 85%;
+    width: 90%;
 
 
 
@@ -84,13 +84,30 @@ a.fill-div {
 .header-class{
     text-align: center;
     color: #2f4858;
+    padding: 10px;
+    flex: 4;
 }
 
-a, a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
-    border: none;
-    box-shadow: none;
+.header-class h1{
+    padding: 100px;
+    text-align: center;
+}
+
+.header-content{
+    display: flex;
+}
+
+
+
+a, a:focus, a:active, a:link {
+    text-decoration: none !important;
+    border: none !important;
+    box-shadow: none !important;
+
+}
+
+a:hover{
+    color: white !important;
 }
 
 .input-field input{
@@ -114,16 +131,54 @@ input:focus{
     font-weight: bold;
     border: none;
     outline: none;
-    font-size: 20px;
+    font-size: 1rem;
     top: 30%;
     left: 50%;
     border-radius: 40px;
-    height: 55px;
-    width: 150px;
+    height: 45px;
+    padding: 10px;
     text-align: center;
     background-color: #ff1d63;
     color: white;
-    margin-bottom: 10px;
+    margin: 15px;
+}
+
+.store-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:200px;
+    width: 60%;
+    border: solid rgba(47, 72, 88, 0.35) 1px;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.category-style{
+    font-weight: bold;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    left: 50%;
+    border-radius: 40px;
+    height: 75px;
+    padding: 75px;
+    text-align: center;
+    background-color: #ff1d63;
+    color: white !important;
+    margin: 15px;
+}
+
+.button-style a, a:hover, a:focus, a:active{
+    text-decoration: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .button-style-go-back {

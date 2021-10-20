@@ -43,6 +43,9 @@ public class Store {
 
     public Store(){}
 
+
+
+
     public Store(Long id, String type, String name, String description, int stock, double price, boolean in_stock){
         this.setId(id);
         this.setType(type);

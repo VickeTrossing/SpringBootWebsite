@@ -9,19 +9,63 @@
     <link rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
 </head>
-<body style="background-color: #ff1d63; overflow-y: scroll">
-<div class="whole-page">
+<body style="background-color: #7a7a7a; overflow-y: auto">
 
-</div>
+
 
     <div class="outer-div">
         <div class="outer-border">
             <div class="header-div">
-                <h1>THIS IS STORE YES</h1>
+                <div class="header-content">
+                    <h1 class="header-class">THIS IS STORE YES</h1>
+
+                    <a class="button-style" th:href="@{/}">cart</a>
+                    <a th:href="@{/logout}" class="button-style">Logout</a>
+                </div>
             </div>
         </div>
     </div>
 
-    <a th:href="@{/logout}" class="btn btn-primary btn-sm mb-3">Logout</a>
+    <div class="outer-div">
+        <div class="outer-border">
+
+                <div class="store-content">
+
+                    <div class="category-div">
+                        <a class="category-style">thing 1</a>
+                        <a class="category-style">thing 2</a>
+                        <a class="category-style">thing 3</a>
+                        <a class="category-style">thing 4</a>
+                    </div>
+                </div>
+            <div class="header-div">
+               <h1>HELLO</h1>
+            </div>
+
+            <div class="store-content">
+                <table class="table table-bordered" id="table-id">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Product name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr th:each="tempProduct : ${listProducts}">
+                            <td th:text="${tempProduct.name}"></td>
+                            <td th:text="${tempProduct.description}"></td>
+                            <td th:text="${tempProduct.price}"></td>
+                            <td th:text="${tempProduct.stock}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>

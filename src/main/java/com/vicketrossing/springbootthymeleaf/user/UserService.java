@@ -14,8 +14,6 @@ public class UserService {
     private final UserRepository userRepository;
 
 
-    PasswordEncoder passwordEncoder;
-
 
     @Autowired
     public UserService(UserRepository userRepository){
@@ -35,9 +33,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    public void saveUser(User user){
-        this.userRepository.save(user);
-    }
+
 
     public User findUser(Long id){
        return userRepository.getById(id);
@@ -54,5 +50,4 @@ public class UserService {
         userRepository.save(user);
     }
 
-    private void encodePassword(User user){}
 }
