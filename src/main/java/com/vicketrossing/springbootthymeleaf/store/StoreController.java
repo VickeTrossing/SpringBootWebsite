@@ -24,7 +24,4 @@ public class StoreController {
 
         return "store/frontpage";
     }
-
-
-
 }

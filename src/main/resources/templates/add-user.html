@@ -28,11 +28,11 @@
 
 
             <div class="input-field">
-                <form action="#" method="post">
-                    <input type="text" placeholder="First name">
-                    <input type="text" placeholder="Last name" >
-                    <input type="text" placeholder="email">
-                    <input type="password" placeholder="password">
+                <form action="#" method="post" th:action="@{/process_create_user}" th:object="${user}">
+                    <input type="text" placeholder="First name" th:field="*{firstName}">
+                    <input type="text" placeholder="Last name" th:field="*{lastName}">
+                    <input type="email" placeholder="email" th:field="*{email}">
+                    <input type="password" placeholder="password" th:field="*{password}">
 
                     <div class="button-div">
                         <button class="button-style" type="submit">Add</button>

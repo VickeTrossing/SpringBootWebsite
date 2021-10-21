@@ -47,9 +47,16 @@ public class MainController {
 
 
     @PostMapping("/process_register")
-    public String saveUSer(@ModelAttribute("user") User newUser){
+    public String saveUser(@ModelAttribute("user") User newUser){
         userService.save(newUser);
         return "user-created";
+    }
+
+    @PostMapping("/process_create_user")
+    public String saveNewUser(@ModelAttribute("user") User newUser){
+        userService.save(newUser);
+
+        return "created_user";
     }
 
     @GetMapping("/login_failed")

@@ -5,9 +5,7 @@ import com.vicketrossing.springbootthymeleaf.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Objects;
@@ -57,7 +55,15 @@ public class AdminController {
 
 
     @GetMapping("/add_user")
-    public String addUser(){
+    public String addUser(Model model){
+        model.addAttribute("user", new User());
         return "add-user";
     }
+
+    @GetMapping("/user_created")
+    public String newUserCreated(){
+        return "created_user";
+    }
+
+
 }
