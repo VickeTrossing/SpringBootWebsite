@@ -31,7 +31,7 @@ public class MainController {
             return "redirect:/admin/";
         }
 
-        return "store/frontpage";
+        return "redirect:/store/";
     }
 
     @GetMapping("/login")
