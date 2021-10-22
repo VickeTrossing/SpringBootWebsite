@@ -153,8 +153,8 @@ input:focus{
     display: flex;
     align-items: center;
     justify-content: center;
-    height:200px;
-    width: 60%;
+    height: 250px;
+    width: 80%;
     border: solid rgba(47, 72, 88, 0.35) 1px;
     border-radius: 15px;
     margin: 30px;
@@ -167,12 +167,13 @@ input:focus{
     font-size: 1rem;
     left: 50%;
     border-radius: 40px;
-    height: 75px;
-    padding: 75px;
+    height: 100px;
+    padding: 100px;
     text-align: center;
     background-color: #ff1d63;
     color: white !important;
-    margin: 15px;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 .button-style a, a:hover, a:focus, a:active{
